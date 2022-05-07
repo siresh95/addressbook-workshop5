@@ -29,6 +29,13 @@ class addressBookData{
             throw 'Invalid Phone Format';
         } 
     }
+
+    get email() {
+        return this._email;
+    }
+    set email(email) {
+        this._email = email;
+    }
     
     get address() {
         return this._address;
@@ -62,12 +69,5 @@ class addressBookData{
         this._zip = zip;
     }
 
-    //Method
-    toString() {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        const empDate = !this.startDate == undefined ?"Undefined" : this.startDate.toLocaleDateString("en-US", options);
-        return "id : " + this.id + " Name : " + this.name + " Gender : " + this.gender + " Profile Pic : "
-            + this.profilePic + " Department : " + this.department + " Salary : " + this.salary + " Start Date : " + empDate
-            + " Notes : " + this.note;
-    }
+
 }

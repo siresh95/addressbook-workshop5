@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address Book App</title>
-    <link rel="stylesheet" href="/AddressBookApp/css/addressBook.css">
+    <link rel="stylesheet" href="../css/addressBook.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
-    <script defer src="/AddressBookApp/js/addressBook.js"></script>
-    <script defer src="/AddressBookApp/js/addressBookForm.js"></script>
-   
+    <script defer src="../js/addressBook.js"></script>
+    <script defer src="../js/addressBookForm.js"></script>
+
 </head>
+
 <body>
-     <!-- UC-1 -->
-  <header class="header-content header">
-    <div class="logo-content">
-      <img src="/AddressBookApp/assets/LOGO.jpg" alt="Address Book" width="43.48" height="43.48">
-      <div>
-        <span class="address-text">ADDRESS</span><br>
-        <span class="address-text address-book">BOOK</span>
-      </div>
-    </div>
-   </header>
+    <!-- UC-1 -->
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assets/LOGO.jpg" alt="Address Book" width="43.48" height="43.48">
+            <div>
+                <span class="address-text">ADDRESS</span><br>
+                <span class="address-text address-book">BOOK</span>
+            </div>
+        </div>
+    </header>
     <!-- UC-2 -->
     <div class="form-content" id="formId">
         <form class="form" action="#" onsubmit="save(event)" onreset="resetForm()">
             <div class="form-head">
                 <span class="master">Person Address Form</span>
                 <div>
-                  <span class="form-cross">X</span>
+                    <span class="form-cross">X</span>
                 </div>
-              </div>
-              <div class="column-content">
+            </div>
+            <div class="column-content">
                 <label class="label text" for="name">Full Name</label>
-                <input class="input" type="text" name="name" id="name"
-                  placeholder="Your Name { Eg: Amit Kumar }" required>
+                <input class="input" type="text" name="name" id="name" placeholder="Your Name { Eg: Amit Kumar }" required>
                 <error-output class="text-error" for="text"></error-output>
-              </div>
-              <div class="column-content">
+            </div>
+            <div class="column-content">
                 <label class="label text" for="phonenumber">Phone Number</label>
-                <input class="input" type="number" name="phonenumber" id="phonenumber"
-                  placeholder="Phone No." required>
-                  <error-output class="phone-error" for="number"></error-output>
-              </div>
-              <div class="column-content ">
+                <input class="input" type="number" name="phonenumber" id="phonenumber" placeholder="Phone No." required>
+                <error-output class="phone-error" for="number"></error-output>
+            </div>
+            <div class="column-content ">
                 <label class="label text" for="address">Address</label>
-                <input class="input column-address" type="text" name="address" id="address"
-                  placeholder="Address" required>
-                  <error-output class="address-error" for="text"></error-output>
+                <input class="input column-address" type="text" name="address" id="address" placeholder="Address" required>
+                <error-output class="address-error" for="text"></error-output>
 
-              </div>
-              <div class="column-content row-content">
+            </div>
+            <div class="column-content row-content">
                 <div class="city-content">
                     <label class="label text" for="city">City</label>
-                    <select id="city" name="city"class="input">  
+                    <select id="city" name="city" class="input">  
                         <option value="Select City" selected>Select City</option>
                         <option value="Jammu">Jammu</option>
                         <option value="Srinagar">Srinagar</option>
@@ -145,8 +144,8 @@
                         <option value="Kargil">Kargil</option>
                         <option value="Kavaratti">Kavaratti</option>
                         <option value="Pondicherry">Pondicherry</option>
-                      </select>              
-                    </div>
+                      </select>
+                </div>
                 <div class="state-content">
                     <label class="label text" for="state">State / U.T</label>
                     <select id="state" name="state" class="input">    
@@ -192,13 +191,14 @@
                 </div>
                 <div class="zip-content">
                     <label class="label text" for="zip">Zip Code</label>
-                    <input class="input " type="number" name="zip" id="zip"
-                  placeholder="Zip Code" required>
+                    <input class="input " type="number" name="zip" id="zip" placeholder="Zip Code" required>
                 </div>
-                </div>
-               
+            </div>
+            <div class="buttonParent">
+                <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                <button type="reset" class="resetButton button">Reset</button>
+            </div>
+
 </body>
+
 </html>
-
-
-  

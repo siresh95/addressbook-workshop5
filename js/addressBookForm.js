@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         textError.textContent = e;
       }
     });
-
+  
     const phone = document.querySelector("#phonenumber");
     const phoneError = document.querySelector(".phone-error");
     phone.addEventListener("input", function () {
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         phoneError.textContent = e;
       }
     });
-
+  
     const address = document.querySelector("#address");
     const addressError = document.querySelector(".address-error");
     address.addEventListener("input", function () {
@@ -43,4 +43,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
         addressError.textContent = e;
       }
     });
-});
+  });
+  
+  const save = (event) => {
+    event.preventDefault();
+    let contactData = createContact();
+    let jsonObject = JSON.stringify(contactData);
+    alert(jsonObject);
+  }
+  
+  const createContact = () => {
+    let contactData = new addressBookData();
+    contactData.name = getInputValueById('#name');
+    contactData.address = getInputValueById('#address');
+    contactData.city = getInputValueById('#city');
+    contactData.state = getInputValueById('#state');
+    contactData.zip = getInputValueById('#zip');
+    contactData.phone = getInputValueById('#phonenumber');
+    contactData.email = getInputValueById('#email');
+    return contactData;
+  }
+  
+  const getInputValueById = (id) => {
+    let value = document.querySelector(id).value;
+    return value;
+  }
+  
+  const resetForm = () => {
+  
+  }

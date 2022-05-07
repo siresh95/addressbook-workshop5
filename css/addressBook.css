@@ -193,6 +193,13 @@ error-output {
     padding: 5px 5px;
 }
 
+
+.submit-reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .submitButton {
     padding: 5px 15px;
     font-size: 15px;

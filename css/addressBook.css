@@ -85,7 +85,7 @@ body{
     border-radius: 10px;
   }
   .master{
-      margin-left: 40%;
+      margin-left: 36%;
   }
 
   .form-cross{
@@ -100,5 +100,81 @@ body{
     border: 3px solid white;
 }
 
+.column-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: stretch; 
+    width: 80%;
+    /* border: 2px solid red; */
+    margin-left: 85px;
+
+}
+
+.label{
+    min-width: 140px;
+    text-align: justify;
+  }
+
+  .input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-top: 5px;
+  }
+
+ .column-content .column-address{
+     padding-top: 80px;
+     /* height: 40px; */
+ }
+
+ /* .select-content{
+     display: flex;
+     flex-direction: row;
+ } */
+
+ #startdate{
+     border: 2px solid black;
+ }
+
+ .row-content{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     /* border: 3px solid green; */
+     /* align-items: center; */
+ }
+
+ .city-content{
+     /* border: 1px solid purple; */
+     /* margin: 48px 2px; */
+     padding: 2px 2px;
+     display: flex;
+     flex-direction: column;
+     width: 30%;
+ }
+ .state-content{
+    /* border: 1px solid purple; */
+    /* margin: 48px 2px; */
+    padding: 2px 2px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+
+}
+.three{
+    /* border: 1px solid purple; */
+    /* margin: 48px 2px; */
+    padding: 2px 2px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+
+
+}
 
 

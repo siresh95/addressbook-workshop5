@@ -43,6 +43,22 @@ window.addEventListener("DOMContentLoaded", (event) => {
         addressError.textContent = e;
       }
     });
+    const email = document.querySelector('#email');
+    const emailError = document.querySelector('.email-error');
+    email.addEventListener('input', function() {
+      // let email = document.querySelector('#email').value;
+      if (address.value.length == 0) {
+        addressError.textContent = "";
+        return;
+      }
+      try{
+        (new addressBookData()).email = email.value;
+        emailError.textContent = "";
+      }catch(e){
+        emailError.textContent = e;
+      }
+  
+    });
   });
   
   const save = (event) => {
@@ -53,7 +69,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
   
   const createContact = () => {
+    let contactList = JSON.parse(localStorage.getItem("ContactList"));
+    let max = 0;
+    if(contactList){
+        for(const contactData of contactList){
+            if(max<contactData._id)
+            max = contactData._id;
+        }
+      }
     let contactData = new addressBookData();
+    contactData.id = parseInt(max) + 1;
     contactData.name = getInputValueById('#name');
     contactData.address = getInputValueById('#address');
     contactData.city = getInputValueById('#city');
@@ -89,7 +114,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     setSelectedIndex('#city',0);
     setSelectedIndex('#state',0);
     setValue('#zip','');
-    setValue('#phone','');
+    setValue('#phonenumber','');
     setValue('#email','');
   }
   

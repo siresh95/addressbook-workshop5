@@ -19,8 +19,8 @@ window.addEventListener('DOMContentLoaded',(event) => {
       <th>City</th>
       <th>State</th>
       <th>Zip Code</th> 
-    `;
-    let innerHtml = `${headerHtml}`;
+    `
+    ;let innerHtml = `${headerHtml}`;
     if(contactList.length != 0){
     for(const contactData of contactList)
     {
@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded',(event) => {
     }
   }
   document.querySelector('#table-display').innerHTML = innerHtml;
-};
+}
   const remove = (node) => {
     let contact = contactList.find(cnt => cnt._id == node.id);
     if(!contact) return;
@@ -53,5 +53,11 @@ window.addEventListener('DOMContentLoaded',(event) => {
     localStorage.setItem("ContactList",JSON.stringify(contactList));
     document.querySelector(".person-count").textContent = contactList.length;
     createInnerHtml();
+}
 
+const update = (node) => {
+  let contact = contactList.find(cnt => cnt._id == node.id);
+  if(!contact) return;
+  localStorage.setItem("editContact",JSON.stringify(contact));
+  window.location.replace(site_properties.addContact_page);
 }

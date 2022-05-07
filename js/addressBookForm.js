@@ -47,6 +47,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   
   const save = (event) => {
     event.preventDefault();
+    event.stopPropagation();
     let contactData = createContact();
     let jsonObject = JSON.stringify(contactData);
     alert(jsonObject);
@@ -61,6 +62,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     contactData.zip = getInputValueById('#zip');
     contactData.phone = getInputValueById('#phonenumber');
     contactData.email = getInputValueById('#email');
+    alert(contactData.toString());
     return contactData;
   }
   

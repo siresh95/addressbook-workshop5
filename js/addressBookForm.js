@@ -67,6 +67,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 const save = (event) => {
+
+  alert("Save button");
   event.preventDefault();
   event.stopPropagation();
   let contactData = createContact();
@@ -149,4 +151,11 @@ const setForm = () => {
   setValue('#zip',contactObj._zip);
   setValue('#phonenumber',contactObj._phone);
   setValue('#email',contactObj._email);
+
+}
+
+
+//reset method
+const reset = () => {
+    alert("Reset button");
 }

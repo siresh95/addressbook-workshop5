@@ -67,14 +67,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 const save = (event) => {
+
+  alert("data saved");
+  debugger
   event.preventDefault();
   event.stopPropagation();
   let contactData = createContact();
+  debugger
   createAndUpdateStorage(contactData);
+
 }
 
 const createContact = () => {
-  let contactList = JSON.parse(localStorage.getItem("ContactList"));
+  
+  let contactList = JSON.parse(localStorage.getItem("AddressBookList"));
   let max = 0;
   if(contactList){
       for(const contactData of contactList){
@@ -149,4 +155,16 @@ const setForm = () => {
   setValue('#zip',contactObj._zip);
   setValue('#phonenumber',contactObj._phone);
   setValue('#email',contactObj._email);
+
+}
+
+
+//save method
+const submit = () => {
+    alert("Details submitted");
+}
+
+//reset method
+const reset = () => {
+    alert("Reset Done");
 }

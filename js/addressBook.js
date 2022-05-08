@@ -37,11 +37,12 @@ class addressBookData{
 
     set email(email)
     {
-        let emailRegex = RegExp('^[a-zA-Z]+[a-zA-Z_+.-]*[a-zA-Z]+@[a-zA-Z]+[.][a-zA-z]{2,}$');
-        if(emailRegex.test(email))
+        // let emailRegex = RegExp('^[a-zA-Z]+[a-zA-Z_+.-]*[a-zA-Z]+@[a-zA-Z]+[.][a-zA-z]{2,}$');
+        // if(emailRegex.test(email))
+        // this._email = email;
+        // else
+        // throw 'Email Incorrect';
         this._email = email;
-        else
-        throw 'Email Incorrect';
     }
     
     get address() {
@@ -83,4 +84,8 @@ class addressBookData{
                 ", City = "+this.city+", State = "+this.state+", Zip = "+this.zip+", Phone = "+this.phone+", Email = "+this.email;
     }
 
+    save(event ){
+        debugger
+        console.log(event);
+    }
 }

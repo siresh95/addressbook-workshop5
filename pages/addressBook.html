@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../css/addressHome.css">
     <link rel="stylesheet" href="../css/addressBook.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    
+ <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
 
 </head>
@@ -35,7 +36,7 @@
             </div>
             <div class="column-content">
                 <label class="label text" for="name">Full Name</label>
-                <input class="input" type="text" name="name" id="name" placeholder="Your Name { Eg: Amit Kumar }" required>
+                <input class="input" type="text" name="name" id="name" placeholder="Your Name { Eg: Amit  }" required>
                 <error-output class="text-error" for="text"></error-output>
             </div>
             <div class="column-content">
@@ -201,7 +202,7 @@
             </div>
             <div class="buttonParent"></div>
             <div class="submit-reset">
-                <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                <button type="submit" class="button submitButton" id="submitButton" onsubmit="save()">Submit</button>
                 <button type="reset" class="button resetButton">Reset</button>
             </div>
             <script  src="../js/addressBookForm.js"></script>

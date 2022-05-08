@@ -41,12 +41,12 @@ body {
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0px;
-    color: #2f95da;
+    color: #020202;
     text-transform: capitalize;
 }
 
 .address-book {
-    color: #42515f;
+    color: #0a0b0b;
 }
 
 .form-content {

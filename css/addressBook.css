@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     border: 0px solid green;
+    background-color: firebrick;
 }
 
 .logo-content {
